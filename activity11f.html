@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Flowers</title>
+<script>
+function bigimg(x)
+{x.style.height="200px";
+x.style.width="200px";}
+function normalimg(x)
+{x.style.height="100px";
+x.style.width="100px";}
+</script>
+</head>
+<body bgcolor=pink>
+<hr size=4 color=blue width=50%>
+<h1 align =center>Beauty of Flowers</h1>
+<hr size=4 color=blue width=50%>
+<img onmouseover="bigimg(this)"
+onmouseout="normalimg(this)"
+src="roses.jpg" height=100 border=6 align=top>
+<font color=purple size=10>A thing of beauty is a joy forever. Flower are a symbol of nature's divine beauty.
+<br><br>
+<img onclick="bigimg(this)"
+onmouseout="normalimg(this)"
+src="sunflower.jpg" height=100 width=100 border=6 align=middle>
+Looking at flowers makes us feel happy and pleasant. Flowers are the greatest gift of God.
+<br><br>
+<img ondblclick="bigimg(this)"
+onmouseout="normalimg(this)"
+src="lily.jpg" height=100 width=100 border=6 align=bottom>
+So, present a bouquet of flowers to somebody you love today!!
+</font>
+</body>
+</html>
