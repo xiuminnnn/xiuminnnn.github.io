@@ -1,0 +1,447 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>University of Birmingham</title>
+<link rel="icon" href="logo.jpg" type="image/jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var header = document.getElementById("myHeader");
+  var sticky = header.offsetTop;
+
+  window.addEventListener("scroll", function() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  });
+});
+
+</script>
+  <style>
+ 
+   header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 10vh;
+      z-index: 1;
+
+    }
+
+header.sticky {
+  background-color: #D3D3D3;color code */
+}
+.sticky {
+  top: 0;
+  width: 100%;
+
+}
+
+    .video-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .ad-video {
+      width: auto;
+      height: 100%;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+
+    .logo {
+      background-image: url('https://intranet.birmingham.ac.uk/staff/images/brand/download/png/crested-wm-mono.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 200px; 
+      height: 100px; 
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 0 20px;
+      position: relative;
+      font-family: arial, sans-serif;
+    }
+
+    nav a:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      width: 1px;
+      height: 20px;
+      background-color: black;
+      transform: translateY(-50%);
+    }
+
+    nav a:hover {
+      color: red;
+    }
+
+    .image-container {
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYtIcdfG0zQDH9MDYqzeptJy-6UNc-ToJygA&usqp=CAU');
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+       animation-name: example;
+  }
+
+    img {
+      width: 60%;
+      height: 70%;
+      float: left;
+    }
+
+    .explanation {
+      margin-left: 50px;
+      font-size: 18px;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+		.button {
+			display: inline-block;
+			padding: 12px 24px;
+			font-size: 18px;
+			font-weight: bold;
+			text-transform: uppercase;
+			background-color: #a1afc9;
+			color: #FFFFFF;
+			border: 2px solid 3d3b4f;
+			border-radius: 50px;
+			transition: all 0.3s ease-in-out;
+			cursor: pointer;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+
+		.button:hover {
+			background-color: #FFFFFF;
+			color: #607DBF;
+		}
+
+		.button:active {
+			transform: translateY(2px);
+			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+		}
+
+
+.image-container2 {
+  background-image: url('https://wallpaperaccess.com/full/1109085.jpg');
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+      display: flex;
+      align-items: center;
+    flex-direction: row-reverse;
+}
+.image-container2 img {
+  width: 160%;
+  height: 70%;
+  float: right;
+}
+    .image-container3 {
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYtIcdfG0zQDH9MDYqzeptJy-6UNc-ToJygA&usqp=CAU');
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+.image-container3 img {
+  width: 250%;
+  height: 70%;
+  float: left;
+}
+.image-container4 {
+  background-image: url('https://www1.chester.ac.uk/sites/default/files/styles/hero/public/Events%20Management%20festival%20image.jpg?itok=eJ3k-5R6');
+  background-size: cover;
+  height: 70%;
+  width: 100%;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+ footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #D5D5D5;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .footer-column {
+      width: calc(25% - 60px);
+      margin-right: 60px;
+    }
+
+
+
+    h4 {
+      margin-top: 0;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+       color: black;
+    }
+
+ a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+    .social-media-icons {
+            margin: 0;
+      padding: 0;
+     
+      list-style: none;
+ display: flex;
+    }
+
+    .social-media-icons li {
+      margin-right: 10px;
+       font-size: 30px;
+    }
+
+
+@media (max-width: 768px) {
+  header {
+    height: 8vh;
+  }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+.logo {
+height: 50px;
+}
+
+nav {
+top: 10px;
+}
+
+nav a {
+font-size: 16px;
+padding: 0 10px;
+}
+
+nav a:not(:last-child)::after {
+right: -5px;
+}
+}
+
+
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column;
+}
+ 
+  img {
+    width: 80%;
+    height: auto;
+    float: none;
+    margin-bottom: 20px;
+  }
+  .explanation {
+    margin-left: 0;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .image-container2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .image-container2 img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .image-container3 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .image-container3 img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-column {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+}
+p,h2 {
+  animation-duration: 10s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+</style>
+</head>
+<body>
+<header id="myHeader">
+    <div class="logo"></div>
+    <nav>
+      <a href="home page.html">Home Page</a>
+      <a href="about us.html">About Us</a>
+      <a href="event page.html">All Event</a>
+      <a href="programmes page.html">Program</a>
+      <a href="contact us.html">Contact Us</a>
+    </nav>
+  </section>
+  </header>
+</div>
+    <div class="video-wrapper">
+      <video class="ad-video" autoplay muted loop>
+     <source src="video.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="image-container">
+<img src="https://www.opsisarch.com/wp-content/uploads//2020/05/University-of-Oregon-Straub-Hall-Lecture-Opsis-Architecture.jpg" alt="Image description">
+  <div class="explanation">
+
+    <h2>Nurturing a Holistic Approach to Education</h2>
+    <p>We prioritize a well-rounded education that focuses on intellectual, emotional, and social development. By emphasizing intellectual rigor, social responsibility, and self-reflection in our curriculum and community, we prepare students to become thought leaders and engaged citizens who can make a positive impact in the world.</p>
+
+    <a href="about us.html"><button class="button">What We Are</button></a>
+
+  </div>
+</div>
+<div class="image-container2">
+<img src="https://img2.storyblok.com/fit-in/1200x630/f/64062/992x736/b1f6d2c25f/campus-a1.jpg">
+<div class="explanation">
+
+    <h2>A Sense of Belonging</h2>
+    <p>It’s a community that’s bursting with energy and ideas. You feel it in residences built around shared passions and in graduate co-living spaces. You see it in the way we own our many differences. At Birmingham, you belong.</p>
+<a href="about Us.html"><button class="button">Explore Campus Life</button></a>
+  </div>
+</div>
+<div class="image-container3">
+<img src="https://www.timeshighereducation.com/student/sites/default/files/styles/default/public/students-in-library.jpg?itok=t6IOnc2t">
+
+<div class="explanation">
+  
+    <h2>Diverse and Dynamic Programs at Our Esteemed University</h2>
+    <p>At our university, we offer a wide range of programs across various fields of study. Our programs are designed to equip students with the knowledge and skills necessary to succeed in their chosen career paths, while also providing opportunities for personal and professional growth through research, internships, and extracurricular activities. </p>
+<a href="programmes page.html"><button class="button">Learn About Programmes</button></a>
+</div>
+</div>
+<div class="image-container4">
+<div class="explanation">
+<h2>Upcoming Events</h2>
+<a href="event page.html"><button class="button">Lets Join It</button></a>
+</div></div>
+ <footer>
+    <div class="footer-column">
+      <h4>University of Brimingham<br>
+      520 East 1st Avenue<br>
+      Vancouver, BC<br>
+      V5T 0H2, UK</h4>
+    </div>
+
+    <div class="footer-column">
+      <h4>University is situated on unceded,<br>
+      traditional and ancestral territories of the<br>
+      xʷməθkʷəy̓əm (Musqueam), <br>
+      Sḵwx̱wú7mesh Úxwumixw (Squamish)<br> 
+      and səl̓ilw̓ətaʔɬ (Tsleil-Waututh) peoples.</h4>    
+    </div>
+
+    <div class="footer-column">
+     <h4><a href="contact us.html">Contact Us</a><br> 
+      <a href="about us.html">About Us</a><br>
+      <a href="programmes page.html">Programmes</a><br>
+      <a href="event page.html">All Event</a><br>
+      <a href="home page.html">Home Page</a></h4>
+    </div>
+
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <ul class="social-media-icons">
+        <li><a href="https://www.facebook.com/unibirmingham/?mibextid=ZbWKwL" class="fa fa-facebook-square"></a></li>
+        <li><a href="https://mobile.twitter.com/unibirmingham&ved=2ahUKEwjys_fn68z9AhXxheYKHRE7BvMQFnoECAgQAQ&usg=AOvVaw35ueqS9bTEhMUVufF5rrF0" class="fa fa-twitter-square"></a></li>
+        <li><a href="https://instagram.com/unibirmingham?igshid=YmMyMTA2M2Y=" class="fa fa-instagram"></a></li>
+       <li><a href="https://youtube.com/@unibirmingham" class="fa fa-youtube"></a></li>
+<li><a href="https://www.bcu.ac.uk/international/contact-us/social-media" class="fa fa-whatsapp"></a></li>
+<li><a href="https://uk.linkedin.com/school/birmingham-city-university/" class="fa fa-linkedin"></a></li>
+<li><a href="https://www.telegram-hongkong.info/" class="fa fa-telegram"></a></li>
+<li><a href="https://www.snapchat.com/add/mybcu" class="fa fa-snapchat"></a></li>
+<li><a href="https:https://www.xing.com/" class="fa fa-xing"></a></li>
+<li><a href="https://www.pinterest.com/#top" class="fa fa-pinterest"></a></li></ul>
+</div>
+</footer>
+
+
+</body>
+</html>

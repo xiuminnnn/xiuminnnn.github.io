@@ -1,0 +1,171 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>University Event Registration Form</title>
+<link rel="icon" href="logo.jpg" type="image/jpg">
+<script>
+function validateForm() {
+  let x = document.MyFirstForm.username.value.trim();
+  if (x === "") {
+    alert("Please provide your Name!");
+    return false;
+  }
+ 
+  var letters = /^[A-Za-z]+$/;
+  if (!x.match(letters))
+  {
+    alert("Please input alphabet characters.");
+    return false;
+  }
+  
+  let studentId = document.MyFirstForm.studentid.value.trim();
+  if (studentId === "") {
+    alert("Please put - (if you're general public) !");
+    return false;
+  }
+  
+  if ((MyFirstForm.gender[0].checked == false) && (MyFirstForm.gender[1].checked == false)) 
+  {
+    alert ("Please choose Gender: Male or Female"); 
+    return false;
+  }
+  
+  let eventname = document.MyFirstForm.eventname.value.trim();
+  if (eventname === "") {
+    alert("Please provide Event Name you want to join!");
+    return false;
+  }
+  let phone = document.MyFirstForm.phone.value.trim(); // move this line inside the function
+  if (phone === "") {
+    alert("Please provide your phone number!");
+    return false;
+  }
+ let regex = /^[0-9]{10}$/;
+  if (!phone.match(regex)) {
+    alert("Please enter a valid 10-digit phone number.");
+    return false;
+  }
+
+let useremail = document.MyFirstForm.useremail.value.trim();
+			if (!validateEmail(useremail)) {
+				alert("Please provide a valid email address!");
+				return false;
+			}
+			function validateEmail(useremail) {
+				const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+				return regex.test(useremail);
+			}
+
+
+  var date1 = new Date();
+  var dob = document.MyFirstForm.dob.value;
+  var date2 = new Date(dob);
+  var y1 = date1.getFullYear() ; 
+  var y2 = date2.getFullYear() ; 
+  var age = y1 - y2 ; 
+  alert("Age ; " + age);
+  return true;
+}
+
+</script>
+
+
+ 
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		h1 {
+			text-align: center;
+		}
+		table {
+			margin: 0 auto;
+			background-color: #fff;
+			border-collapse: collapse;
+			border-spacing: 0;
+			width: 60%;
+			box-shadow: 0px 2px 2px #ccc;
+		}
+		td {
+			padding: 10px;
+			border: 1px solid #ddd;
+			text-align: center;
+		}
+		input[type="text"], select, textarea {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			border: none;
+			border-bottom: 2px solid #ddd;
+			background-color: #f2f2f2;
+			font-size: 16px;
+			resize: none;
+		}
+@media only screen and (max-width: 600px) {
+  table {
+    width: 100%;
+  }
+  input[type="text"], select, textarea {
+    width: 95%;
+  }
+}
+
+
+	</style>
+</head>
+<body>
+<form name="MyFirstForm" onsubmit="return validateForm()">
+	<h1>Event Registration Form</h1>
+	<table>
+		<tr>
+			<td>Name:</td>
+			<td><input type="text" name="username"></td>
+		</tr>
+		<tr>
+			<td>Student ID:</td>
+			<td><input type="text" name="studentid"></td>
+		</tr>
+<tr>
+<td>Gender:
+<td><input type=radio name=gender value=Male>Male
+<input type=radio name=gender value=Female>Female</td>
+</tr>
+<tr>
+			<td>Type:</td>
+			<td>
+				<select name="type">
+					<option value="IS">Internal Student</option>
+					<option value="GP">General Public</option>
+	
+				</select>
+			</td>
+		</tr>
+<tr>
+			<td>Event Name:</td>
+			<td><input type="text" name="eventname"></td></tr>
+<tr>
+			<td>Email Address:</td>
+			<td><input type="text" name="useremail"></td>
+		</tr>
+<tr>
+<td>Date of birth:</td>
+<td><input type=date name=dob><br></td>
+</tr>
+		<tr>
+			<td>Phone Number:</td>
+			<td><input type="text" name="phone"></td>
+		</tr>
+
+
+</table>
+<br><br>
+<center>
+<input type=submit value=Submit>
+<input type=reset value=Reset>
+</center>
+</form>
+</body>
+</html>
+

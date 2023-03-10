@@ -1,0 +1,441 @@
+
+<html>
+<head>
+<title>Programmes</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var buttons = document.getElementsByClassName("show-details");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function() {
+      var details = this.nextElementSibling;
+      if (details.style.display === "block") {
+        details.style.display = "none";
+      } else {
+        details.style.display = "block";
+      }
+    });
+  }
+});
+</script>
+<style>
+ * {
+	margin: 0;
+      padding: 0;
+}
+.header {
+min-height: 60vh;
+width: 100%;
+background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url('https://th.bing.com/th/id/R.1ad43e4b77423ff425ec141393e5e68d?rik=FJ%2ba2%2bW8p1pdug&riu=http%3a%2f%2fsiteimages.textbooks.com%2fuploads%2f2014%2f10%2fduke-university-flickr-theomania-most-beautiful-college-campuses.jpg&ehk=%2fY51UDBokjcrRuMfJPcz9pAoFiOHnPKqAfYkKU98bSc%3d&risl=&pid=ImgRaw&r=0');
+background-position: center;
+background-size: cover;
+position: relative;
+  filter: brightness(1.5);
+
+}
+
+.logo {
+      background-image: url('https://intranet.birmingham.ac.uk/staff/images/brand/download/png/crested-wm-mono.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 200px; 
+      height: 100px; 
+    }
+
+nav {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  justify-content: flex-end;
+}
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 0 20px;
+      position: relative;
+      font-family: arial, sans-serif;
+
+    }
+
+    nav a:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      width: 1px;
+      height: 20px;
+      background-color: black;
+      transform: translateY(-50%);
+    }
+
+    nav a:hover {
+      color: red;
+    }
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.text-box h1 {
+  font-size: 4rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+
+.program {
+			width: 380px;
+                  height: 420px;
+			margin: 50px;
+			background-color: #fff;
+			border-radius: 20px;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.2);
+			transition: all 0.3s ease-in-out;
+			overflow: hidden;
+ display: inline-block;
+		}
+
+
+		.program:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.2);
+		}
+
+		.program img {
+			width: 100%;
+			height: 150px;
+			object-fit: cover;
+			object-position: center;
+		}
+		.program h3 {
+			font-size: 24px;
+			font-weight: bold;
+			color: #333;
+			margin: 20px;
+		}
+		.program p {
+			font-size: 16px;
+			color: #666;
+			margin: 0 20px 20px;
+			line-height: 1.5;
+		}
+
+
+a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #D5D5D5;
+      font-size: 14px;
+      color: black;
+    }
+
+    .footer-column {
+      width: calc(25% - 60px);
+      margin-right: 60px;
+    }
+
+
+
+    h4 {
+      margin-top: 0;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+
+    .social-media-icons {
+            margin: 0;
+      padding: 0;
+     
+      list-style: none;
+ display: flex;
+    }
+
+    .social-media-icons li {
+      margin-right: 10px;
+       font-size: 30px;
+    }
+
+
+
+.program-details {
+  display: none;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+h3 {
+text-align: center;
+}
+
+.container2 {
+  display: block;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 70px auto;
+  max-width: 1200px;
+}
+.show-details {
+			display: inline-block;
+			padding: 12px 24px;
+			font-size: 18px;
+			font-weight: bold;
+			text-transform: uppercase;
+			background-color: #a1afc9;
+			color: #FFFFFF;
+			border: 2px solid 3d3b4f;
+			border-radius: 50px;
+			transition: all 0.3s ease-in-out;
+			cursor: pointer;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+
+		.show-details:hover {
+			background-color: #FFFFFF;
+			color: #607DBF;
+		}
+
+		.show-details:active {
+			transform: translateY(2px);
+			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+		}
+
+table {
+  border-collapse: collapse;
+  width: 100%; 
+height: 80%;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  border: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+th {
+  background-color: #a1afc9;
+  color: white;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+@media (max-width: 768px) {
+  header {
+    height: 8vh;
+  }
+}
+
+
+@media (max-width: 576px) {
+.logo {
+display: none;
+}
+nav {
+top: 10px;
+}
+
+nav a {
+font-size: 16px;
+padding: 0 10px;
+}
+
+
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .program {
+    width: calc(100% - 40px);
+    height: 50%;
+    margin: 20px;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-column {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .program-details {
+    overflow-x: scroll;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+
+
+</style>
+
+<body>
+<section class="header">
+    <div class="logo"></div>
+    <nav>
+<a href="home page.html">Home Page</a>
+      <a href="about us.html">About Us</a>
+      <a href="event page.html">All Event</a>
+      <a href="programmes page.html">Program</a>
+      <a href="contact us.html">Contact Us</a>
+    </nav>
+  </section>
+</div>
+<div class="text-box">
+<h1>Program<h1>
+</div>
+<div class="program">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_QMulZiTzuNFLYHlvGVizyxDYnhfYdA0pOg&usqp=CAU" alt="Program 1">
+			<h3>Pre-University</h3>
+			<ul>
+				<li>Diploma in Computer Science</li>
+				<li>Diploma in Accounting</li>
+				<li>Diploma in Business
+		</div>
+	<div class="program">
+			<img src="https://pediaa.com/wp-content/uploads/2022/08/Postgraduate.jpg" alt="Program 2">
+			<h3>Undergraduate</h3>
+					<ul>
+				<li>Bachelor in Science (Hons) in Computer Science</li>
+				<li>Bachelor of Science (Hons) in Accounting & Finance</li>
+				<li>Bachelor of Science (Hons) in Business & Management</li></ul>
+	
+		</div>
+		<div class="program">
+			<img src="https://fass.nus.edu.sg/ecs/wp-content/uploads/sites/4/2021/03/Undergraduate-graduation-1-2048x1365.jpg">
+			<h3>Postgraduate</h3>
+			<ul>
+				<li>Master of Business Administration (MBA)</li>
+				<li>BMaster of Science (MSc)</li>
+				<li>Master of Arts (MA)</li></ul>
+		</div>
+	</div></div>
+<center>
+<div class="container2">
+<button class="show-details">Show Details</button>
+<div class="program-details">
+<table><thead>
+    <tr>
+      <th>Program</th>
+      <th>Duration</th>
+      <th>Entry Requirements</th>
+      <th>Credit Hours</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><h3>Pre-University</h3></td>
+      <td>2 years</td>
+      <td>
+        <ul>
+          <li>Minimum 5 credits in SPM or equivalent</li>
+          <li>Pass in Bahasa Melayu and History in SPM or equivalent</li>
+        </ul>
+      </td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td><h3>Undergraduate</h3></td>
+      <td>3-4 years</td>
+      <td>
+       <ul>
+          <li>Minimum 2.5 CGPA or equivalent</li>
+          <li>Pass in English in SPM or equivalent</li>
+          <li>Specific requirements for each program</li>
+        </ul>
+      </td>
+      <td>120-140</td>
+    </tr>
+    <tr>
+      <td><h3>Postgraduate</h3></td>
+      <td>1-2 years</td>
+      <td>
+        <ul>
+          <li>Minimum Bachelor's degree or equivalent</li>
+          <li>Specific requirements for each program</li>
+        </ul>
+      </td>
+      <td>30-40</td>
+    </tr>
+</table>
+
+</div></div>
+</center>
+<footer>
+    <div class="footer-column">
+      <h4>University of Brimingham<br>
+      520 East 1st Avenue<br>
+      Vancouver, BC<br>
+      V5T 0H2, UK</h4>
+    </div>
+
+    <div class="footer-column">
+      <h4>University is situated on unceded,<br>
+      traditional and ancestral territories of the<br>
+      xʷməθkʷəy̓əm (Musqueam), <br>
+      Sḵwx̱wú7mesh Úxwumixw (Squamish)<br> 
+      and səl̓ilw̓ətaʔɬ (Tsleil-Waututh) peoples.</h4>    
+    </div>
+    <div class="footer-column">
+      <h4><a href="contact us.html">Contact Us</a><br> 
+      <a href="about us.html">About Us</a><br>
+      <a href="programmes page.html">Programmes</a><br>
+      <a href="event page.html">All Event</a><br>
+      <a href="home page.html">Home Page</a></h4>
+    </div>
+
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <ul class="social-media-icons">
+        <li><a href="https://www.facebook.com/unibirmingham/?mibextid=ZbWKwL" class="fa fa-facebook-square"></a></li>
+        <li><a href="https://mobile.twitter.com/unibirmingham&ved=2ahUKEwjys_fn68z9AhXxheYKHRE7BvMQFnoECAgQAQ&usg=AOvVaw35ueqS9bTEhMUVufF5rrF0" class="fa fa-twitter-square"></a></li>
+        <li><a href="https://instagram.com/unibirmingham?igshid=YmMyMTA2M2Y=" class="fa fa-instagram"></a></li>
+       <li><a href="https://youtube.com/@unibirmingham" class="fa fa-youtube"></a></li>
+<li><a href="https://www.bcu.ac.uk/international/contact-us/social-media" class="fa fa-whatsapp"></a></li>
+<li><a href="https://uk.linkedin.com/school/birmingham-city-university/" class="fa fa-linkedin"></a></li>
+<li><a href="https://www.telegram-hongkong.info/" class="fa fa-telegram"></a></li>
+<li><a href="https://www.snapchat.com/add/mybcu" class="fa fa-snapchat"></a></li>
+<li><a href="https:https://www.xing.com/" class="fa fa-xing"></a></li>
+<li><a href="https://www.pinterest.com/#top" class="fa fa-pinterest"></a></li>
+</ul></div></footer>
+</body>
+</html>
+

@@ -1,0 +1,343 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Contact Us</title>
+<link rel="icon" href="logo.jpg" type="image/jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+		function validateForm() {
+			alert("Form submitted successfully!");
+			return true;
+		}
+
+
+	</script>
+
+<style>
+* {
+	margin: 0;
+      padding: 0;
+}
+.header {
+min-height: 50vh;
+width: 100%;
+background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url('https://th.bing.com/th/id/R.1ad43e4b77423ff425ec141393e5e68d?rik=FJ%2ba2%2bW8p1pdug&riu=http%3a%2f%2fsiteimages.textbooks.com%2fuploads%2f2014%2f10%2fduke-university-flickr-theomania-most-beautiful-college-campuses.jpg&ehk=%2fY51UDBokjcrRuMfJPcz9pAoFiOHnPKqAfYkKU98bSc%3d&risl=&pid=ImgRaw&r=0');
+background-position: center;
+background-size: cover;
+position: relative;
+  filter: brightness(1.5);
+}
+
+.logo {
+      background-image: url('https://intranet.birmingham.ac.uk/staff/images/brand/download/png/crested-wm-mono.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 200px; 
+      height: 100px;
+    }
+
+nav {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  justify-content: flex-end;
+}
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 0 20px;
+      position: relative;
+      font-family: arial, sans-serif;
+
+    }
+
+    nav a:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      width: 1px;
+      height: 20px;
+      background-color: black;
+      transform: translateY(-50%);
+    }
+
+    nav a:hover {
+      color: red;
+    }
+.text-box {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.text-box h1 {
+  font-size: 4rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+	.container {
+			display: grid;
+			grid-template-columns: 34% 33% 33%;
+		}
+.container1 {
+  text-align: center;
+}
+.map {
+  padding: 0;
+  text-align: center;
+}
+.dark-mode {
+  filter: invert(1) hue-rotate(180deg);
+}
+.container2 {
+display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+ .container3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: grey;
+  filter: brightness(1.5);
+}
+h2 {
+text-align: center;
+font-size: 30px;
+}
+p {
+text-align: center;
+font-size: 20px;
+}
+footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #D5D5D5;
+      font-size: 14px;
+      color: black;
+    }
+
+    .footer-column {
+      width: calc(25% - 60px);
+      margin-right: 60px;
+    }
+
+
+
+    h4 {
+      margin-top: 0;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: black;
+    }
+
+
+    .social-media-icons {
+            margin: 0;
+      padding: 0;
+     
+      list-style: none;
+ display: flex;
+    }
+
+    .social-media-icons li {
+      margin-right: 10px;
+       font-size: 30px;
+    }
+
+a {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #007bff;
+}
+		form {
+			margin: auto;
+			width: 100%;
+			border: 0;
+			padding: 10px;
+		}
+		label {
+			display: block;
+			margin-bottom: 5px;
+		}
+		input[type=text], input[type=email], select {
+			width: 100%;
+			padding: 8px;
+			border-radius: 4px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			margin-top: 5px;
+			margin-bottom: 10px;
+			resize: vertical;
+		}
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+@media only screen and (max-width: 600px) {
+.logo {
+display: none;
+}
+
+nav {
+top: 10px;
+}
+
+nav a {
+font-size: 16px;
+padding: 0 10px;
+}
+
+nav a:not(:last-child)::after {
+right: -5px;
+}
+}
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 100%;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-column {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container3 {
+    width: 100%;
+    height: 350px;
+  }
+}
+
+
+</style>
+</head>
+<body>
+<section class="header">
+
+    <div class="logo"></div>
+    <nav>
+      <a href="home page.html">Home Page</a>
+      <a href="about us.html">About Us</a>
+      <a href="event page.html">All Event</a>
+      <a href="programmes page.html">Program</a>
+      <a href="contact us.html">Contact Us</a>
+    </nav>
+  </section>
+</div>
+<div class="text-box">
+<h1>Let's Contact Us</h1>
+</div>
+<section class="container">
+<div class="container1">
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15134.327669309294!2d-0.127758!3d51.507351!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDU3JzE0LjciTiAwwrAyMCcxNi45Ilc!5e0!3m2!1sen!2sus!4v1646797261282!5m2!1sen!2sus" width="99%" height="380" style="border:0;" allowfullscreen="" loading="lazy" class="dark-mode"></iframe>
+  </div></div></div>
+<div class="container2">
+<form name="myForm" onsubmit="return validateForm()">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+
+		<label for="subject">Subject:</label>
+		<select id="subject" name="subject" required>
+			<option value="">Select a subject</option>
+			<option value="Pre-University">Pre-University</option>
+			<option value="Undergraduate">Undergraduate</option>
+			<option value="Postgraduate">Postgraduate</option>
+		</select>
+
+		<label for="message">Message:</label>
+		<textarea id="message" name="message" rows="5" required></textarea>
+		<br>
+		<input type="submit" value="Submit">
+	</form>
+
+
+    </div>
+ 
+
+
+<div class="container3">
+<div class="office-hour">
+      <h2>Office Hour</h2><br><br>
+      <p>Mondays and Wednesdays : 2:00 pm-4:00 pm<br><br>
+Location : Room 205, Science Building</p>
+    </div></div>
+
+</section>
+ <footer>
+    <div class="footer-column">
+      <h4>University of Brimingham<br>
+      520 East 1st Avenue<br>
+      Vancouver, BC<br>
+      V5T 0H2, UK</h4>
+    </div>
+
+    <div class="footer-column">
+      <h4>University is situated on unceded,<br>
+      traditional and ancestral territories of the<br>
+      xʷməθkʷəy̓əm (Musqueam), <br>
+      Sḵwx̱wú7mesh Úxwumixw (Squamish)<br> 
+      and səl̓ilw̓ətaʔɬ (Tsleil-Waututh) peoples.</h4>    
+    </div>
+
+    <div class="footer-column">
+     <h4><a href="contact us.html">Contact Us</a><br> 
+      <a href="about us.html">About Us</a><br>
+      <a href="programmes page.html">Programmes</a><br>
+      <a href="event page.html">All Event</a><br>
+      <a href="home page.html">Home Page</a></h4>
+    </div>
+
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <ul class="social-media-icons">
+        <li><a href="https://www.facebook.com/unibirmingham/?mibextid=ZbWKwL" class="fa fa-facebook-square"></a></li>
+        <li><a href="https://mobile.twitter.com/unibirmingham&ved=2ahUKEwjys_fn68z9AhXxheYKHRE7BvMQFnoECAgQAQ&usg=AOvVaw35ueqS9bTEhMUVufF5rrF0" class="fa fa-twitter-square"></a></li>
+        <li><a href="https://instagram.com/unibirmingham?igshid=YmMyMTA2M2Y=" class="fa fa-instagram"></a></li>
+       <li><a href="https://youtube.com/@unibirmingham" class="fa fa-youtube"></a></li>
+<li><a href="https://www.bcu.ac.uk/international/contact-us/social-media" class="fa fa-whatsapp"></a></li>
+<li><a href="https://uk.linkedin.com/school/birmingham-city-university/" class="fa fa-linkedin"></a></li>
+<li><a href="https://www.telegram-hongkong.info/" class="fa fa-telegram"></a></li>
+<li><a href="https://www.snapchat.com/add/mybcu" class="fa fa-snapchat"></a></li>
+<li><a href="https:https://www.xing.com/" class="fa fa-xing"></a></li>
+<li><a href="https://www.pinterest.com/#top" class="fa fa-pinterest"></a></li>
+</ul></div></footer>
+</body>
+</html>
+

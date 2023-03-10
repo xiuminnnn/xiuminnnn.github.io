@@ -1,0 +1,578 @@
+<head><meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>About Us</title>
+<link rel="icon" href="logo.jpg" type="image/jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+        var table = document.getElementById("myTable");
+        var cells = table.getElementsByTagName("td");
+        for (var i = 0; i < cells.length; i++) {
+          cells[i].onmouseover = function() {
+            this.style.backgroundColor = "darkgrey";
+          };
+          cells[i].onmouseout = function() {
+            this.style.backgroundColor = "";
+          };
+        }
+      });
+ 
+document.addEventListener("DOMContentLoaded", function() {
+  let slideIndex = 0;
+  let dots = document.getElementsByClassName("dot");
+  function showSlides(index) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    if (index >= slides.length) {
+      slideIndex = 0;
+    }
+    if (index < 0) {
+      slideIndex = slides.length - 1;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex].style.display = "block";
+    dots[slideIndex].className += " active";
+  }
+
+  function carousel() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.left = i * 100 + "%";
+    }
+    setInterval(() => {
+      slideIndex++;
+      showSlides(slideIndex);
+    }, 3000);
+  }
+
+  carousel();
+
+  document.getElementsByClassName("prev")[0].addEventListener("click", function() {
+    slideIndex--;
+    showSlides(slideIndex);
+  });
+  document.getElementsByClassName("next")[0].addEventListener("click", function() {
+    slideIndex++;
+    showSlides(slideIndex);
+  });
+});
+
+</script>
+	<style>
+  * {
+	margin: 0;
+      padding: 0;
+}
+.header {
+min-height: 60vh;
+width: 100%;
+background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url('https://th.bing.com/th/id/R.1ad43e4b77423ff425ec141393e5e68d?rik=FJ%2ba2%2bW8p1pdug&riu=http%3a%2f%2fsiteimages.textbooks.com%2fuploads%2f2014%2f10%2fduke-university-flickr-theomania-most-beautiful-college-campuses.jpg&ehk=%2fY51UDBokjcrRuMfJPcz9pAoFiOHnPKqAfYkKU98bSc%3d&risl=&pid=ImgRaw&r=0');
+background-position: center;
+background-size: cover;
+position: relative;
+  filter: brightness(1.5);
+
+}
+ .logo {
+      background-image: url('https://intranet.birmingham.ac.uk/staff/images/brand/download/png/crested-wm-mono.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 200px; /* set the width of the logo container */
+      height: 100px; /* set the height of the logo container */
+    }
+
+nav {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  justify-content: flex-end;
+}
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 0 20px;
+      position: relative;
+      font-family: arial, sans-serif;
+
+    }
+
+    nav a:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      width: 1px;
+      height: 20px;
+      background-color: black;
+      transform: translateY(-50%);
+    }
+
+    nav a:hover {
+      color: red;
+    }
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1 {
+  color: white;
+  font-size: 4rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+
+		.container {
+			display: grid;
+			grid-template-columns: 27% 59% 14%;
+                  line-height: 1.9;
+		}
+
+		.sidebar {
+			padding: 80px;
+		}
+               .table {
+      border-collapse: collapse;
+      width: 130%;
+      height: 8%;
+    }
+
+    td {
+      border: 1px solid black;
+      text-align: left;
+    }
+table tr:nth-child(1) {
+  background-color: #ADD8E6;
+}
+table tr:nth-child(2),
+table tr:nth-child(3),
+table tr:nth-child(4),
+table tr:nth-child(5) {
+  background-color: lightgrey;
+}
+	.main {
+			background-color: white;
+			padding: 50px;
+		}
+
+		.info {
+			background-color: lightgray;
+			padding: 50px;
+		}
+
+      .slideshow-container {
+        max-width: 500px;
+        position: relative;
+        margin: auto;
+      }
+      
+
+      .mySlides {
+        display: none;
+      }
+
+
+      .prev,.next {
+        cursor: pointer;
+  position: absolute;
+  top: 80%;
+  z-index: 1;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 50%;
+  user-select: none;
+}
+      }
+
+      .next {
+  right: 50%;
+  transform: translateX(50%);
+}
+
+
+.prev {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
+
+      /* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+.dots {
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.leadership {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.leader {
+  width: 300px;
+  margin: 20px;
+  text-align: center;
+}
+
+.leader img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.leader h3 {
+  margin-top: 10px;
+}
+
+.leader p {
+  font-style: italic;
+  margin-top: 5px;
+}
+
+a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #D5D5D5;
+      font-size: 14px;
+      color: black;
+    }
+
+    .footer-column {
+      width: calc(25% - 60px);
+      margin-right: 60px;
+    }
+
+
+
+    h4 {
+      margin-top: 0;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+
+    .social-media-icons {
+            margin: 0;
+      padding: 0;
+     
+      list-style: none;
+ display: flex;
+    }
+
+    .social-media-icons li {
+      margin-right: 10px;
+       font-size: 30px;
+    }
+@media only screen and (max-width: 600px) {
+.logo {
+display: none;
+}
+nav {
+top: 10px;
+}
+
+nav a {
+font-size: 16px;
+padding: 0 10px;
+}
+
+nav a:not(:last-child)::after {
+right: -5px;
+}
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    display: block;
+  }
+  .sidebar {
+    padding: 20px;
+  }
+  .main {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .table {
+    width: 100%;
+    font-size: 14px;
+    margin-top:20%;
+  }
+  
+
+  .table th {
+    display: none;
+  }
+  
+
+  .table tr {
+    display: block;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+  }
+  
+
+  .table td {
+    display: block;
+    text-align: center;
+  }
+  
+
+  .table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-column {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+	</style>
+</head>
+<body>
+<section class="header">
+
+    <div class="logo"></div>
+    <nav>
+  <a href="home page.html">Home Page</a>
+      <a href="about us.html">About Us</a>
+      <a href="event page.html">All Event</a>
+      <a href="programmes page.html">Program</a>
+      <a href="contact us.html">Contact Us</a>
+    </nav>
+</section>
+</div>
+<div class="text-box">
+<h1>About Us<h1>
+</div> 
+<div class="container">
+  <div class="sidebar">
+  
+     <table class="table" id="myTable">
+      <tr>
+        <td><a href="about us.html">About Our University</a></td>
+      </tr>
+      <tr>
+        <td><a href="#Our Mission">Our Mission</a></td>
+      </tr>
+      <tr>
+        <td><a href="#Our History">Our History</a></td>
+      </tr>
+      <tr>
+        <td><a href="#Accreditation and Rankings">Accreditation and Rankings</a></td>
+      </tr>
+      <tr>
+        <td><a href="#Community Engagement">Community Engagement</a></td>
+      </tr>
+    </table>
+
+  </div>  
+ 
+		<div class="main">
+    <div class="slideshow-container">
+<div class="mySlides fade">
+        <img src="https://wallpaperaccess.com/full/2137250.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="https://ctfimages.intoglobal.com/xw2h6mjophtz/731sOVK2X4DrG83SK4jXAf/395ba54e3dc059a2fbb5b1fa5ca33cf3/Contentful_-_Campus_LifeUOM.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="https://wallpaper.dog/large/20382896.jpg" style="width:100%">
+      </div>
+      <div class="prev">
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <div class="next"></div>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+<div class="dots">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+</div>
+                <h1>Welcome to Our University</h1>
+			
+			<p>More than 100 years of excellence
+
+The University of Birmingham has been at the forefront of UK higher education for nearly a century. Over the decades we have become innovators and pioneers, pushing academic boundaries and leading social change.<br><br>
+
+We strive to create a stronger, better University, building on our past to create an exceptional future. Our four guiding principles form the foundation of our strategy: a genuine love of learning, creating new knowledge, embracing and celebrating diversity of people and ideas, and caring for our environment.
+<br><br>
+In 2016, we celebrated the 100th anniversary of the grant of our Royal Charter by King George V. </p><br><br>
+			<h2 id="Our Mission">Our Mission</h2>
+			<p>Our university is committed to providing a transformative educational experience that prepares students for meaningful and fulfilling lives. We strive to foster a diverse and inclusive community that values intellectual curiosity, critical thinking, and creative expression. Our mission is to advance knowledge through innovative teaching, research, and service that addresses the most pressing challenges facing society. We aim to instill in our students a lifelong commitment to learning, ethical leadership, and responsible citizenship, and to empower them to make a positive impact in their communities and the world.
+</p><br><br>
+			<h2 id="Our History">Our History</h2>
+			<p>Before the University of Birmingham, there was University College, Birmingham<br><br>
+
+University College, Birmingham existed from 1876 to 1909 and was the precursor to the University of Birmingham.<br><br>
+
+Its history can be traced back to the efforts of John Percival, headmaster of Clifton College, to press for the establishment of such an institution. In 1872, Percival wrote to the Oxford colleges observing that the provinces lacked a university culture. The following year he produced a pamphlet called 'The Connection of the Universities and the Great Towns', which was well received by Benjamin Jowett, Master of Balliol College, Oxford. Jowett was to become a significant figure, both philosophically and financially, in the establishment of University College, Birmingham.<br><br>
+
+In June 1874, a meeting took place at Birmingham's Victoria Rooms 'to promote a School of Science and Literature for the West of England'. Percival and Jowett spoke at the meeting, and won the support of Albert Fry and Lewis Fry, members of an influential and affluent local family.<br><br>
+
+University College, Birmingham finally opened its doors at 9 am on Tuesday 10 October 1876 in rented premises at 32 Park Row. Initially there were two professors and five lecturers offering courses in 15 subjects. The College was open to men and women on the same basis (except in medicine). During the first session, 99 day students registered (30 men and 69 women) and 238 evening ones (143 men and 95 women).<br><br>
+
+
+Everything changed on 14 January 1908, when HO Wills promised to donate £100,000 - a massive sum - provided that a Charter was granted within two years. The Wills gift set off a chain reaction, and more money was raised within 24 hours than had been attracted during the previous three decades.<br><br>
+
+Now things really started to move. After years of discussion, it was agreed that the Merchant Venturers' College and elements of the University College - formerly rivals - would merge to form a new Faculty of Engineering. Furthermore, the City Council offered the proceeds of a penny rate (some £7,000 a year), subject to a Charter being obtained. Best of all, when a petition for a Charter was submitted to the Privy Council, it met with royal favour.<br><br>
+
+On 24 May 1909, 33 years after University College opened, the Charter, approved by King Edward VII, came into effect. It was a day of celebration across Birmingham.</p><br><br>
+			<h2 id="Accreditation and Rankings">Accreditation and Rankings</h2>
+			<p>Birmingham, University of UK, is ranked in the top 251 universities in the UK and the top 302 in the UK for International outlook. Through world-class research that expands minds and changes lives, the dedication of our teachers and the feel of the Royal Holloway experience, ours is a community that inspires individuals to succeed academically, socially and personally.<br><br>
+
+Birmingham’s research also remains within top 25% of all UK universities for research with 88% assessed as 4* and 3* in the Research Excellence Framework (REF 2021.)<br><br>
+
+We have a central UK base and a 135-acre campus, located in Egham, Surrey, 40 minutes south west of central London and just 7 miles from Heathrow airport.<br><br>
+
+1.The Guardian University Guide 2022<br>
+2.Times Higher Education (THE) World University Rankings 2022.</p><br><br>
+</p><br><br>
+			<h2 id="Community Engagement">Community Engagement</h2>
+			<p>At University of Birmingham, we believe that community engagement is a crucial component of our mission as an institution of higher education. We are committed to fostering positive relationships with our local community and creating meaningful partnerships that benefit both our students and the wider community.<br><br>
+ Through our collaborations with local businesses, non-profit organizations, and government agencies, we aim to address pressing social and environmental issues and promote sustainable development.</p><br><br>
+
+		</div>
+		<div class="info">
+<div class="leadership">
+<h2>Leadership</h2>
+  <div class="leader">
+    <img src="https://www.whitehouse.gov/wp-content/uploads/2021/04/V20210305LJ-0043.jpg" alt="University President">
+    <h3>Dr. Jane Smith</h3>
+    <p>President</p>
+    <p>"Innovation"</p><br>
+  </div>
+  <div class="leader">
+    <img src="https://people.com/thmb/HCe0rzp-4h-SVW9Kt_gfTbdQasM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(704x399:706x401)/Joe-Biden_01-8e74a4ee45144803be041018a2a32f87.jpg" alt="University Provost">
+    <h3>Dr. John Doe</h3>
+    <p>Provost</p>
+    <p>"Collaboration"</p><br>
+  </div>
+  <div class="leader">
+    <img src="https://president.msu.edu/_assets/images/tkw-aug20221.jpg" alt="Dean of School of Business">
+    <h3>Dr. Susan Lee</h3>
+    <p>Dean, School of Business</p>
+    <p>"Dedication"</p><br>
+</div></div></div>
+  </div>
+</div>
+
+ <footer>
+    <div class="footer-column">
+      <h4>University of Brimingham<br>
+      520 East 1st Avenue<br>
+      Vancouver, BC<br>
+      V5T 0H2, UK</h4>
+    </div>
+
+    <div class="footer-column">
+      <h4>University is situated on unceded,<br>
+      traditional and ancestral territories of the<br>
+      xʷməθkʷəy̓əm (Musqueam), <br>
+      Sḵwx̱wú7mesh Úxwumixw (Squamish)<br> 
+      and səl̓ilw̓ətaʔɬ (Tsleil-Waututh) peoples.</h4>    
+    </div>
+
+ <div class="footer-column">
+     <h4><a href="contact us.html">Contact Us</a><br> 
+      <a href="about us.html">About Us</a><br>
+      <a href="programmes page.html">Programmes</a><br>
+      <a href="event page.html">All Event</a><br>
+      <a href="home page.html">Home Page</a></h4>
+    </div>
+
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <ul class="social-media-icons">
+        <li><a href="https://www.facebook.com/unibirmingham/?mibextid=ZbWKwL" class="fa fa-facebook-square"></a></li>
+        <li><a href="https://mobile.twitter.com/unibirmingham&ved=2ahUKEwjys_fn68z9AhXxheYKHRE7BvMQFnoECAgQAQ&usg=AOvVaw35ueqS9bTEhMUVufF5rrF0" class="fa fa-twitter-square"></a></li>
+        <li><a href="https://instagram.com/unibirmingham?igshid=YmMyMTA2M2Y=" class="fa fa-instagram"></a></li>
+       <li><a href="https://youtube.com/@unibirmingham" class="fa fa-youtube"></a></li>
+<li><a href="https://www.bcu.ac.uk/international/contact-us/social-media" class="fa fa-whatsapp"></a></li>
+<li><a href="https://uk.linkedin.com/school/birmingham-city-university/" class="fa fa-linkedin"></a></li>
+<li><a href="https://www.telegram-hongkong.info/" class="fa fa-telegram"></a></li>
+<li><a href="https://www.snapchat.com/add/mybcu" class="fa fa-snapchat"></a></li>
+<li><a href="https:https://www.xing.com/" class="fa fa-xing"></a></li>
+<li><a href="https://www.pinterest.com/#top" class="fa fa-pinterest"></a></li></ul>
+</div>
+</footer>
+</body>
+</html>
